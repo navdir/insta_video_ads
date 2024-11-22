@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoDeck Editor</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f9f9; /* Neutral background for Instagram-friendly display */
+      font-family: Arial, sans-serif;
+    }
+    /* Responsive iframe container */
+    .iframe-container {
+      width: 100%;
+      max-width: 480px; /* Limit width for a mobile-friendly view */
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    /* Instagram-friendly message for unsupported browsers */
+    .unsupported-message {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media screen and (max-width: 480px) {
+      .iframe-container {
+        height: 90%; /* Maintain some padding for mobile */
+      }
+      .unsupported-message {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="iframe-container">
+    <!-- MoDeck Editor Embed -->
+    <iframe
+      src="https://app.modeck.io/?m=5fe8996fc8f32e459032731fb6a09057e4f380f7"
+      name="MoDeck Editor"
+      scrolling="no"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Optional: Message for users in unsupported environments -->
+  <div class="unsupported-message">
+    <h2>Oops!</h2>
+    <p>This editor works best in your browser. Please open it in Safari, Chrome, or another browser for the best experience!</p>
+  </div>
+</body>
+</html>
